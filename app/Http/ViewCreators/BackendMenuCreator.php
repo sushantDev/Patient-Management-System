@@ -70,7 +70,7 @@ class BackendMenuCreator {
             'class' => false,
             'route' => route('staff.index'),
             'icon'  => 'md md-person',
-            'title' => 'Doctor'
+            'title' => 'Staff'
         ]);
 
         $view->with('allMenu', $menu);

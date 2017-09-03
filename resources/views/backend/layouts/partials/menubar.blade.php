@@ -1,5 +1,5 @@
 <!-- BEGIN MENUBAR-->
-<div id="menubar" class="animate">
+<div id="menubar" class="menubar-inverse animate">
     <div class="menubar-fixed-panel">
         <div>
             <a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
