@@ -33,6 +33,9 @@ class StorePatient extends FormRequest {
         ];
     }
 
+    /**
+     * @return array
+     */
     public function data()
     {
         $data = [

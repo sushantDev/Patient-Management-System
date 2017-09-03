@@ -167,7 +167,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
-
+        Yajra\DataTables\DataTablesServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -234,5 +234,6 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ],
 ];

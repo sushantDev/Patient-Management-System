@@ -14,7 +14,15 @@ class CreateDoctorsTable extends Migration
     public function up()
     {
         Schema::create('doctors', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('name');
+            $table->string('username');
+            $table->string('address');
+            $table->string('phone');
+            $table->integer('age');
+            $table->enum('gender', [ 'Female', 'Male', 'Others'])->nullable();
+            $table->string('department');
             $table->timestamps();
         });
     }

@@ -4,8 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreDoctor extends FormRequest
-{
+class StoreDoctor extends FormRequest {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -13,7 +13,7 @@ class StoreDoctor extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,31 @@ class StoreDoctor extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'       => 'required|max:200',
+            'address'    => 'required',
+            'phone'      => 'required',
+            'age'        => 'required',
+            'gender'     => 'required',
+            'department' => 'required',
+            'image'      => 'image|max:2048'
         ];
+    }
+
+    /**
+     * @return array
+     */
+    public function data()
+    {
+        $data = [
+            'name'       => $this->get('name'),
+            'username'   => str_slug($this->get('name')),
+            'address'    => $this->get('address'),
+            'phone'      => $this->get('phone'),
+            'age'        => $this->get('age'),
+            'gender'     => $this->get('gender'),
+            'department' => $this->get('department'),
+        ];
+
+        return $data;
     }
 }
