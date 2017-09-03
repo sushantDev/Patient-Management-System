@@ -1,0 +1,136 @@
+/* Form Error */
+.has-error .input-group-addon {
+    color: inherit;
+    background-color: inherit;
+    border-color: transparent;
+}
+
+/* General */
+.table td {
+    white-space: nowrap;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.preview {
+    cursor: pointer;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+.dl-horizontal dt {
+    text-align: left;
+}
+
+/* Summernote */
+.note-editor {
+    margin-top: 15px;
+}
+
+.note-editor .modal-dialog {
+    margin-top: 100px;
+}
+
+.note-group-select-from-files {
+    display: none;
+}
+
+/* Material Admin List*/
+.gui-text {
+    padding: 8px 12px;
+}
+
+/* Nano Scroller */
+#content .nano:focus,
+#content .nano-content:focus {
+    outline: none;
+}
+
+#content .nano-pane {
+    z-index: 1;
+    width: 5px;
+    background: transparent;
+}
+
+#content .nano-slider {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#content section {
+    position: relative;
+    padding-top: 16px;
+    z-index: 1;
+    min-height: 100%;
+}
+
+/* Custom Gird Column */
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-1-5 {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-1-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-1-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-1-5 {
+        width: 20%;
+        float: left;
+    }
+}
+
+/* Vue CSS */
+.searchbar {
+    opacity: 0;
+}
+
+.menubar-pin .searchbar, .menubar-visible .searchbar {
+    opacity: 1;
+    transition: 1s;
+}
+
+/* Header Dropdown */
+.header-nav-profile .dropdown > a {
+    min-width: 160px;
+    padding: 21px;
+}
+
+.header-nav-profile .dropdown.open > a {
+    padding: 15px 21px;
+}
+
+/* Affix */
+@media (min-width: 768px) {
+    .card-affix {
+        position: fixed;
+    }
+
+    .affix-4 {
+        width: 25%;
+    }
+}
