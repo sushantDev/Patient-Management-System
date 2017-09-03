@@ -6,6 +6,7 @@ use App\doctor;
 use App\Http\Requests\StoreDoctor;
 use App\Http\Requests\UpdateDoctor;
 use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\Facades\DataTables;
 
 class DoctorController extends Controller
 {
@@ -43,6 +44,14 @@ class DoctorController extends Controller
         });
 
         return redirect()->route('doctor.index')->withSuccess(trans('messages.create_success', ['entity' => 'Doctor']));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function datatable()
+    {
+        return Datatables::eloquent(Doctor::query())->make(true);
     }
 
     /**

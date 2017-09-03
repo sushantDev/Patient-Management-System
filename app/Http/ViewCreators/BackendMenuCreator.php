@@ -66,6 +66,13 @@ class BackendMenuCreator {
             'title' => 'Doctor'
         ]);
 
+        array_push($menu, [
+            'class' => false,
+            'route' => route('staff.index'),
+            'icon'  => 'md md-person',
+            'title' => 'Doctor'
+        ]);
+
         $view->with('allMenu', $menu);
     }
 }

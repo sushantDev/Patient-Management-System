@@ -6,6 +6,7 @@ use App\Http\Requests\StorePatient;
 use App\Http\Requests\UpdatePatient;
 use App\patient;
 use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\Facades\DataTables;
 
 class PatientController extends Controller {
 
@@ -43,6 +44,14 @@ class PatientController extends Controller {
         });
 
         return redirect()->route('patient.index')->withSuccess(trans('messages.create_success', ['entity' => 'Patient']));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function datatable()
+    {
+        return Datatables::eloquent(Patient::query())->make(true);
     }
 
     /**

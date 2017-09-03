@@ -1,5 +1,5 @@
 The topic for my academic project is PATIENT MANAGEMENT SYSTEM.
-As name suggests it is the information system that is developed by the hospital in managing the records of the people that are involved in the organization.\
+As name suggests it is the information system that is developed by the hospital in managing the records of the people that are involved in the organization.
 
 This system provide various benefits in an organization that helps storing records in an organization in an easier manner.
 PATIENT MANAGEMNET SYSTEM provide various features and functions.

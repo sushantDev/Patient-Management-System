@@ -12,7 +12,7 @@
             <div class="card col-sm-4 col-sm-offset-4 ">
                 <div class="card-body">
                     <br/>
-                    <span class="text-lg text-bold text-primary">{{ setting('title') }}</span>
+                    <span class="text-lg text-bold text-secondary">{{ setting('title') }}</span>
                     <br/><br/>
                     @include('partials.errors')
                     <form class="form form-validate" role="form" style="text-align:left;" method="POST" action="{{ url('/login') }}" autocomplete="off" novalidate>
@@ -39,7 +39,7 @@
                                 </div>
                             </div><!--end .col -->
                             <div class="col-xs-6 text-right">
-                                <button class="btn btn-primary btn-raised" type="submit">Login</button>
+                                <button class="btn btn-secondary btn-raised" type="submit">Login</button>
                             </div><!--end .col -->
                         </div><!--end .row -->
                     </form>

@@ -16,45 +16,18 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="patient-datatable">
                         <thead>
                         <tr>
-                            <th width="5%">#</th>
-                            <th width="5%">Photo</th>
-                            <th width="10%">Name</th>
-                            <th width="10%">Address</th>
-                            <th width="10%">Phone no</th>
-                            <th width="10%">Age</th>
-                            <th width="10%">Gender</th>
-                            <th width="15%" class="text-right">Actions</th>
+                            <th>{{ strtoupper(__('name')) }}</th>
+                            <th>{{ strtoupper(__('address')) }}</th>
+                            <th>{{ strtoupper(__('phone no')) }}</th>
+                            <th>{{ strtoupper(__('age')) }}</th>
+                            <th>{{ strtoupper(__('gender')) }}</th>
+                            <th>{{ strtoupper(__('action')) }}</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($patients as $key => $patient)
-                            <tr>
-                                <td>{{++$key}}</td>
-                                <div class="title-icon">
-                                    <td><img src="{{ isset($patient->image)  ? asset($patient->image->thumbnail(40,40)) : asset('image/placeholder.jpg') }}" style="width: 40px;height: 40px;border-radius: 40px;"></td>
-                                </div>
-                                <td>{{ str_limit($patient->name, 47) }}</td>
-                                <td>{{ str_limit($patient->address, 40) }}</td>
-                                <td>{{ $patient->phone }}</td>
-                                <td>{{ $patient->age }}</td>
-                                <td>{{ $patient->gender }}</td>
-                                <td class="text-right">
-                                    <a href="{{route('patient.edit', $patient->username)}}" class="btn btn-flat btn-primary btn-xs">
-                                        Edit
-                                    </a>
-                                    <button type="button" data-url="{{ route('patient.destroy', $patient->username) }}" class="btn btn-flat btn-primary btn-xs item-delete">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="4" class="text-center">No patients available.</td>
-                            </tr>
-                        @endforelse
                         </tbody>
                     </table>
                 </div>
@@ -62,3 +35,55 @@
         </div>
     </section>
 @stop
+
+@push('styles')
+<link rel="stylesheet" type="text/css" href="{{ asset('vendor/datatables/datatables.min.css') }}">
+@endpush
+
+@push('scripts')
+<script src="{{ asset('vendor/datatables/datatables.min.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        var table = $('#patient-datatable').DataTable({
+            "dom": "rBftip",
+            "language": {
+                "processing": "<h2 id='dt_loading'><span class='fa fa - spinner fa-pulse'></span> Loading...</h2>"
+            },
+            "buttons": [
+                'pageLength', 'colvis'
+            ],
+            "order": [],
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "type": "POST",
+                "data": {"_token": '{{ csrf_token() }}'},
+                "url": '{{ route('patient.datatable') }}'
+            },
+            "pageLength": "25",
+            "columns": [
+                {"data": "name", "name": "name", "searchable": "false"},
+                {"data": "address", "name": "address"},
+                {"data": "phone", "name": "phone"},
+                {"data": "age", "name": "age"},
+                {"data": "gender", "name": "gender"},
+                {
+                    "data": "username", "class": "text-right", "orderable": false, "render": function (data) {
+                    return "<a href='/patient/" + data + "/edit' class='btn btn-default'> Edit </a>" +
+                        "<a href='/patient/" + data + "/destroy' class='btn btn-danger'> Delete </a>";
+                }
+                }
+            ]
+        });
+
+        $(document).on('click', '.uk-button-delete', function () {
+            var that = this;
+            var name = $(that).data('name');
+            UIkit.modal.confirm("Delete this '" + name + "' ?").then(function () {
+                $(that).closest('form').submit();
+            });
+        });
+        $('input[type=search]').addClass('uk-input');
+    });
+</script>
+@endpush
