@@ -90,3 +90,20 @@ Route::group(['prefix' => 'appointment', 'as' => 'appointment.'], function ()
     Route::put('{appointment}', 'AppointmentController@update')->name('update');
     Route::delete('{appointment}', 'AppointmentController@destroy')->name('destroy');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Inpatient
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'inpatient', 'as' => 'inpatient.'], function ()
+{
+    Route::get('', 'InpatientController@index')->name('index');
+    Route::get('create', 'InpatientController@create')->name('create');
+    Route::post('', 'InpatientController@store')->name('store');
+    Route::post('/datatable', 'InpatientController@datatable')->name('datatable');
+    Route::get('{inpatient}', 'InpatientController@show')->name('show');
+    Route::get('{inpatient}/edit', 'InpatientController@edit')->name('edit');
+    Route::put('{inpatient}', 'InpatientController@update')->name('update');
+    Route::delete('{inpatient}', 'InpatientController@destroy')->name('destroy');
+});

@@ -2,9 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateInpatient extends FormRequest
+class UpdateInpatient extends StoreInpatient
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,18 +12,6 @@ class UpdateInpatient extends FormRequest
      */
     public function authorize()
     {
-        return false;
-    }
-
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
-    {
-        return [
-            //
-        ];
+        return true;
     }
 }

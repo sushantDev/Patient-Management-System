@@ -80,6 +80,13 @@ class BackendMenuCreator {
             'title' => 'Appointment'
         ]);
 
+        array_push($menu, [
+            'class' => false,
+            'route' => route('inpatient.index'),
+            'icon'  => 'md md-person-outline',
+            'title' => 'Inpatient'
+        ]);
+
         $view->with('allMenu', $menu);
     }
 }
