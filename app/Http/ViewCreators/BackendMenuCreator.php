@@ -69,8 +69,15 @@ class BackendMenuCreator {
         array_push($menu, [
             'class' => false,
             'route' => route('staff.index'),
-            'icon'  => 'md md-person',
+            'icon'  => 'md md-account-circle',
             'title' => 'Staff'
+        ]);
+
+        array_push($menu, [
+            'class' => false,
+            'route' => route('appointment.index'),
+            'icon'  => 'md md-event',
+            'title' => 'Appointment'
         ]);
 
         $view->with('allMenu', $menu);

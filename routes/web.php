@@ -73,3 +73,20 @@ Route::group(['prefix' => 'staff', 'as' => 'staff.'], function ()
     Route::put('{staff}', 'StaffController@update')->name('update');
     Route::delete('{staff}', 'StaffController@destroy')->name('destroy');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Appointment
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'appointment', 'as' => 'appointment.'], function ()
+{
+    Route::get('', 'AppointmentController@index')->name('index');
+    Route::get('create', 'AppointmentController@create')->name('create');
+    Route::post('', 'AppointmentController@store')->name('store');
+    Route::post('/datatable', 'AppointmentController@datatable')->name('datatable');
+    Route::get('{appointment}', 'AppointmentController@show')->name('show');
+    Route::get('{appointment}/edit', 'AppointmentController@edit')->name('edit');
+    Route::put('{appointment}', 'AppointmentController@update')->name('update');
+    Route::delete('{appointment}', 'AppointmentController@destroy')->name('destroy');
+});

@@ -580,8 +580,7 @@ body,
   height: 100%;
 }
 body {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-  background-blend-mode: multiply,multiply;
+  background: #e5e6e6;
   background-size: 100% 100%;
   color: #313335;
   -ms-overflow-style: scrollbar;
@@ -1507,7 +1506,7 @@ a.text-success:hover {
   }
 }
 #header.header-inverse {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background: #242a31;
   color: rgba(255, 255, 255, 0.6);
 }
 .header-inverse .header-nav .btn-icon-toggle:hover {
