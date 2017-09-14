@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => "PMS",
+    'name' => "Patient Management System",
 
     /*
     |------------------------

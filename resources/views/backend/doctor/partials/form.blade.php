@@ -51,6 +51,14 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
+                            {{ Form::email('email',old('email'),['class'=>'form-control', 'required']) }}
+                            {{ Form::label('email','Email*') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
                             {{ Form::select('gender', array('Male'=>'Male', 'Female'=>'Female', 'Others'=>'Others'), old('gender'), ['class' => 'form-control gender', 'required']) }}
                             {{ Form::label('gender','Gender*') }}
                         </div>

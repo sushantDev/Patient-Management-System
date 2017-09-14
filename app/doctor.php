@@ -11,6 +11,7 @@ class doctor extends Model
         'username',
         'address',
         'phone',
+        'email',
         'age',
         'gender',
         'department'

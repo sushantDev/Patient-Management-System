@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 Route::get('/home', 'HomeController@dashboard')->name('home');
 

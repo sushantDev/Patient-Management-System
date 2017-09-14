@@ -65,7 +65,10 @@ class InpatientController extends Controller
      */
     public function edit(Inpatient $inpatient)
     {
-        return view('backend.inpatient.edit',compact('inpatient'));
+        $doctors = Doctor::all()->pluck('name', 'id');
+        $staffs = Staff::all()->pluck('name', 'id');
+
+        return view('backend.inpatient.edit',compact('inpatient','doctors','staffs'));
     }
 
     /**

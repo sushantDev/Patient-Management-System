@@ -16,20 +16,22 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover" id="patient-datatable">
-                        <thead>
-                        <tr>
-                            <th>{{ strtoupper(__('name')) }}</th>
-                            <th>{{ strtoupper(__('address')) }}</th>
-                            <th>{{ strtoupper(__('phone no')) }}</th>
-                            <th>{{ strtoupper(__('age')) }}</th>
-                            <th>{{ strtoupper(__('gender')) }}</th>
-                            <th>{{ strtoupper(__('action')) }}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="patient-datatable">
+                            <thead>
+                            <tr>
+                                <th>{{ strtoupper(__('name')) }}</th>
+                                <th>{{ strtoupper(__('address')) }}</th>
+                                <th>{{ strtoupper(__('phone no')) }}</th>
+                                <th>{{ strtoupper(__('age')) }}</th>
+                                <th>{{ strtoupper(__('gender')) }}</th>
+                                <th>{{ strtoupper(__('action')) }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +72,7 @@
                 {
                     "data": "username", "class": "text-right", "orderable": false, "render": function (data) {
                     return "<a href='/patient/" + data + "/edit' class='btn btn-default'> Edit </a>" +
-                        "<a href='/patient/" + data + "/destroy' class='btn btn-danger'> Delete </a>";
+                        "<button data-url='/patient/" + data + "/destroy' class='btn btn-danger item-delete'> Delete </button>";
                 }
                 }
             ]

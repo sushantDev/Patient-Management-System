@@ -43,7 +43,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            {{ Form::number('skills',old('skills'),['class'=>'form-control', 'required']) }}
+                            {{ Form::text('skills',old('skills'),['class'=>'form-control', 'required']) }}
                             {{ Form::label('skills','Skills*') }}
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            {{ Form::number('admit_type',old('admit_type'),['class'=>'form-control', 'required']) }}
+                            {{ Form::text('admit_type',old('admit_type'),['class'=>'form-control', 'required']) }}
                             {{ Form::label('admit_type','Admit Type*') }}
                         </div>
                     </div>
@@ -59,15 +59,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            {{ Form::number('admit_time',old('admit_time'),['class'=>'form-control', 'required']) }}
-                            {{ Form::label('admit_time','Admit Time*') }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            {{ Form::number('admit_time',old('admit_time'),['class'=>'form-control', 'required']) }}
+                            {{ Form::time('admit_time',old('admit_time'),['class'=>'form-control', 'required']) }}
                             {{ Form::label('admit_time','Admit Time*') }}
                         </div>
                     </div>

@@ -16,24 +16,26 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover" id="staff-datatable">
-                        <thead>
-                        <tr>
-                            <th>{{ strtoupper(__('name')) }}</th>
-                            <th>{{ strtoupper(__('staff type')) }}</th>
-                            <th>{{ strtoupper(__('address')) }}</th>
-                            <th>{{ strtoupper(__('phone no')) }}</th>
-                            <th>{{ strtoupper(__('email')) }}</th>
-                            <th>{{ strtoupper(__('age')) }}</th>
-                            <th>{{ strtoupper(__('gender')) }}</th>
-                            <th>{{ strtoupper(__('dob')) }}</th>
-                            <th>{{ strtoupper(__('marital status')) }}</th>
-                            <th>{{ strtoupper(__('action')) }}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="staff-datatable">
+                            <thead>
+                            <tr>
+                                <th>{{ strtoupper(__('name')) }}</th>
+                                <th>{{ strtoupper(__('staff type')) }}</th>
+                                <th>{{ strtoupper(__('address')) }}</th>
+                                <th>{{ strtoupper(__('phone no')) }}</th>
+                                <th>{{ strtoupper(__('email')) }}</th>
+                                <th>{{ strtoupper(__('age')) }}</th>
+                                <th>{{ strtoupper(__('gender')) }}</th>
+                                <th>{{ strtoupper(__('dob')) }}</th>
+                                <th>{{ strtoupper(__('marital status')) }}</th>
+                                <th>{{ strtoupper(__('action')) }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

@@ -20,6 +20,7 @@ class CreateDoctorsTable extends Migration
             $table->string('username');
             $table->string('address');
             $table->string('phone');
+            $table->string('email');
             $table->integer('age');
             $table->enum('gender', [ 'Female', 'Male', 'Others'])->nullable();
             $table->string('department');

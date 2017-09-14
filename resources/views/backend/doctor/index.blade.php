@@ -16,21 +16,24 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover" id="doctor-datatable">
-                        <thead>
-                        <tr>
-                            <th>{{ strtoupper(__('name')) }}</th>
-                            <th>{{ strtoupper(__('address')) }}</th>
-                            <th>{{ strtoupper(__('phone no')) }}</th>
-                            <th>{{ strtoupper(__('age')) }}</th>
-                            <th>{{ strtoupper(__('gender')) }}</th>
-                            <th>{{ strtoupper(__('department')) }}</th>
-                            <th>{{ strtoupper(__('action')) }}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="doctor-datatable">
+                            <thead>
+                            <tr>
+                                <th>{{ strtoupper(__('name')) }}</th>
+                                <th>{{ strtoupper(__('address')) }}</th>
+                                <th>{{ strtoupper(__('phone no')) }}</th>
+                                <th>{{ strtoupper(__('email')) }}</th>
+                                <th>{{ strtoupper(__('age')) }}</th>
+                                <th>{{ strtoupper(__('gender')) }}</th>
+                                <th>{{ strtoupper(__('department')) }}</th>
+                                <th>{{ strtoupper(__('action')) }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,6 +69,7 @@
                 {"data": "name", "name": "name", "searchable": "false"},
                 {"data": "address", "name": "address"},
                 {"data": "phone", "name": "phone"},
+                {"data": "email", "name": "email"},
                 {"data": "age", "name": "age"},
                 {"data": "gender", "name": "gender"},
                 {"data": "department", "name": "department"},

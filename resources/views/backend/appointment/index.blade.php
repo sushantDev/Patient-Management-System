@@ -16,21 +16,23 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover" id="appointment-datatable">
-                        <thead>
-                        <tr>
-                            <th>{{ strtoupper(__('name')) }}</th>
-                            <th>{{ strtoupper(__('address')) }}</th>
-                            <th>{{ strtoupper(__('phone no')) }}</th>
-                            <th>{{ strtoupper(__('date')) }}</th>
-                            <th>{{ strtoupper(__('time')) }}</th>
-                            <th>{{ strtoupper(__('doctor_id')) }}</th>
-                            <th>{{ strtoupper(__('action')) }}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="appointment-datatable">
+                            <thead>
+                            <tr>
+                                <th>{{ strtoupper(__('name')) }}</th>
+                                <th>{{ strtoupper(__('address')) }}</th>
+                                <th>{{ strtoupper(__('phone no')) }}</th>
+                                <th>{{ strtoupper(__('date')) }}</th>
+                                <th>{{ strtoupper(__('time')) }}</th>
+                                <th>{{ strtoupper(__('doctor_id')) }}</th>
+                                <th>{{ strtoupper(__('action')) }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,13 +74,13 @@
                 {
                     "data": "id", "class": "text-right", "orderable": false, "render": function (data) {
                     return "<a href='/appointment/" + data + "/edit' class='btn btn-default'> Edit </a>" +
-                        "<a href='/appointment/" + data + "/destroy' class='btn btn-danger'> Delete </a>";
+                        "<button data-url='/appointment/" + data + "/destroy' class='btn btn-danger item-delete'> Delete </button>";
                 }
                 }
             ]
         });
 
-        $(document).on('click', '.uk-button-delete', function () {
+        $(document).on('click', '.btn-delete', function () {
             var that = this;
             var name = $(that).data('name');
             UIkit.modal.confirm("Delete this '" + name + "' ?").then(function () {

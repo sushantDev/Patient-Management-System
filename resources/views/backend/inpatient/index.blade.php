@@ -16,26 +16,28 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover" id="inpatient-datatable">
-                        <thead>
-                        <tr>
-                            <th>{{ strtoupper(__('name')) }}</th>
-                            <th>{{ strtoupper(__('address')) }}</th>
-                            <th>{{ strtoupper(__('phone no')) }}</th>
-                            <th>{{ strtoupper(__('skills')) }}</th>
-                            <th>{{ strtoupper(__('admit type')) }}</th>
-                            <th>{{ strtoupper(__('admit type')) }}</th>
-                            <th>{{ strtoupper(__('medicine')) }}</th>
-                            <th>{{ strtoupper(__('ward no')) }}</th>
-                            <th>{{ strtoupper(__('room no')) }}</th>
-                            <th>{{ strtoupper(__('doctor')) }}</th>
-                            <th>{{ strtoupper(__('staff')) }}</th>
-                            <th>{{ strtoupper(__('action')) }}</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="inpatient-datatable">
+                            <thead>
+                            <tr>
+                                <th>{{ strtoupper(__('name')) }}</th>
+                                <th>{{ strtoupper(__('address')) }}</th>
+                                <th>{{ strtoupper(__('phone no')) }}</th>
+                                <th>{{ strtoupper(__('skills')) }}</th>
+                                <th>{{ strtoupper(__('admit type')) }}</th>
+                                <th>{{ strtoupper(__('admit type')) }}</th>
+                                <th>{{ strtoupper(__('medicine')) }}</th>
+                                <th>{{ strtoupper(__('ward no')) }}</th>
+                                <th>{{ strtoupper(__('room no')) }}</th>
+                                <th>{{ strtoupper(__('doctor')) }}</th>
+                                <th>{{ strtoupper(__('staff')) }}</th>
+                                <th>{{ strtoupper(__('action')) }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
