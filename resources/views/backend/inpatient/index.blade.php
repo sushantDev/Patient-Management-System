@@ -84,19 +84,12 @@
                 {
                     "data": "id", "class": "text-right", "orderable": false, "render": function (data) {
                     return "<a href='/inpatient/" + data + "/edit' class='btn btn-default'> Edit </a>" +
-                        "<a href='/inpatient/" + data + "/destroy' class='btn btn-danger'> Delete </a>";
+                        "<button data-url='/inpatient/" + data + "/destroy' class='btn btn-danger item-delete'> Delete </button>";
                 }
                 }
             ]
         });
 
-        $(document).on('click', '.uk-button-delete', function () {
-            var that = this;
-            var name = $(that).data('name');
-            UIkit.modal.confirm("Delete this '" + name + "' ?").then(function () {
-                $(that).closest('form').submit();
-            });
-        });
         $('input[type=search]').addClass('uk-input');
     });
 </script>

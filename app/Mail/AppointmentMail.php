@@ -18,7 +18,7 @@ class AppointmentMail extends Mailable
      */
     public function __construct($data)
     {
-        $this->data = $data;3
+        $this->data = $data;
     }
 
     /**
@@ -28,6 +28,14 @@ class AppointmentMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this
+            ->subject('Regarding Appointment from patient')
+            ->view('email.appointment-mail')
+            ->with([
+                'name'    => $this->data['name'],
+                'phone'    => $this->data['phone'],
+                'date'    => $this->data['date'],
+                'time'    => $this->data['time'],
+            ]);
     }
 }

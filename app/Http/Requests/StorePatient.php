@@ -26,7 +26,7 @@ class StorePatient extends FormRequest {
         return [
             'name'     => 'required|max:200',
             'address'  => 'required',
-            'phone'    => 'required',
+            'phone'    => 'required|min:10',
             'age'      => 'required',
             'gender'   => 'required',
             'image'   => 'image|max:2048'

@@ -77,15 +77,6 @@
                 }
             ]
         });
-
-        $(document).on('click', '.uk-button-delete', function () {
-            var that = this;
-            var name = $(that).data('name');
-            UIkit.modal.confirm("Delete this '" + name + "' ?").then(function () {
-                $(that).closest('form').submit();
-            });
-        });
-        $('input[type=search]').addClass('uk-input');
     });
 </script>
 @endpush

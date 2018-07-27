@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
 class PatientController extends Controller {
-
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

@@ -22,4 +22,12 @@ class appointment extends Model
     {
         return 'id';
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class);
+    }
 }

@@ -80,7 +80,7 @@
                 {
                     "data": "username", "class": "text-right", "orderable": false, "render": function (data) {
                     return "<a href='/staff/" + data + "/edit' class='btn btn-default'> Edit </a>" +
-                        "<a href='/staff/" + data + "/destroy' class='btn btn-danger'> Delete </a>";
+                        "<button data-url='/staff/" + data + "/destroy' class='btn btn-danger item-delete'> Delete </button>";
                 }
                 }
             ]

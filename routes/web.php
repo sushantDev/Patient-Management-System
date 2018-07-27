@@ -37,7 +37,7 @@ Route::group(['prefix' => 'patient', 'as' => 'patient.'], function ()
     Route::get('{patient}', 'PatientController@show')->name('show');
     Route::get('{patient}/edit', 'PatientController@edit')->name('edit');
     Route::put('{patient}', 'PatientController@update')->name('update');
-    Route::delete('{patient}', 'PatientController@destroy')->name('destroy');
+    Route::delete('{patient}', 'PatientController@destroy')->name('de   stroy');
 });
 
 /*

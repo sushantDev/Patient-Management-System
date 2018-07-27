@@ -6,7 +6,6 @@ use App\doctor;
 use App\Http\Requests\StoreAppointment;
 use App\Http\Requests\UpdateAppointment;
 use App\Mail\AppointmentMail;
-use function foo\func;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Yajra\DataTables\Facades\DataTables;
@@ -47,13 +46,13 @@ class AppointmentController extends Controller
             return ucwords($item);
         });
 
+        $inputs = $request->except('_token');
+
+        Mail::to($email)->send(new AppointmentMail($inputs));
+
         DB::transaction(function () use ($request)
         {
             $data = $request->data();
-
-            $inputs = $request->except('_token');
-
-            Mail::to($email)->send(new AppointmentMail($inputs));
 
             $appointment = Appointment::create($data);
 
